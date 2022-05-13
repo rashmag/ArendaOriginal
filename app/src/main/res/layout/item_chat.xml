@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    app:cardCornerRadius="6dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_popular"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvItemNameChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:hint="Имя"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewChatAds"
+            app:layout_constraintTop_toTopOf="@+id/imageViewChatAds" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewChatAds"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/photo_loading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewChatUser"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="60dp"
+            android:src="@drawable/photo_loading"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewChatAds"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewChatAds"
+            app:layout_constraintStart_toStartOf="@+id/imageViewChatAds" />
+
+        <TextView
+            android:id="@+id/last_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="@+id/tvItemNameChat"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemNameChat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
